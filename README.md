@@ -10,7 +10,7 @@ To Run the webapp: (make sure you have nodejs and mysql installed)
   1. Clone the repository.
   2. cd to the main folder
   3. run the command 'npm install' to download the dependencies
-  4. import the database to mysql from 'mandee.sql' file
+  4. import the database to mysql from 'db > mandee.sql' file
   5. change the required credentials in the db > connection.js file
   6. use the command 'npm run devStart' to start the backend
   7. use the command 'npm run start' to start the backend.
