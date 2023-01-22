@@ -4,7 +4,7 @@ MANDEE is a platform that connects the FARMERS with the RETAILERS directly witho
 3. Guidelines Page
 You can login both as AS Farmer and as Buyer
 -By the IDEATORS
-(Komal Tarachandani, Siddhant Rao, Satyam Jaiswal and Vikas Rajpurohit)
+(Siddhant Rao, Komal Tarachandani, Satyam Jaiswal and Vikas Rajpurohit)
 
 To Run the webapp: (make sure you have nodejs and mysql installed)
   1. Clone the repository.
