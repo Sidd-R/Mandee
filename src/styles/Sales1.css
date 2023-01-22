@@ -1,0 +1,13 @@
+.sliderSales {
+    padding: 5% 2%;
+    margin: 0px;
+    /* box-shadow: #ADC60663 -5px 5px, #ADC60663 -10px 10px, #ADC60663 -15px 15px; */
+}
+
+.salesField {
+    align-items: left;
+}
+
+.searchField{
+    margin-top: 50px;
+}

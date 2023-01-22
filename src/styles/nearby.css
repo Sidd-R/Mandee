@@ -1,0 +1,37 @@
+.market{
+    height: 100vh;
+    padding: 20px;
+    color: rgba(80, 115, 79, 1);
+    font-size: x-large;
+}
+
+.market-content{
+    display: grid;
+    grid-template-areas: "A B";
+    width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: rgba(240, 245, 209, 1) 10px 39px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.left{
+    padding-right: 20px;
+}
+
+.find{
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    padding:  0px 10px;
+    font-size: large;
+    margin-top: 10px;
+}
+
+.right{
+    grid-area: B;
+    padding: 10px 20px;
+}
+
+.location, .search{
+    margin: 20px 0;
+}

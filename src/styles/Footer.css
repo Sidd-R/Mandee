@@ -1,0 +1,22 @@
+:root {
+    --light : #eee;
+    --text : #50734F;
+  }
+
+.footer {
+    background-color: #F0F5D1;
+    color: var(--text);
+    font-weight: 900;
+    font-family: Poppins;
+    font-size: 60px;
+    text-align: center;
+    padding: 40px;
+  }
+
+  #footerDetails{
+    color: var(--text);
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 100px 0px 0px;
+  }

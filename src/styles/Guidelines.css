@@ -1,0 +1,148 @@
+:root {
+  --light: #eee;
+  --text: #50734F;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.Navbar {
+  background-color: var(--light);
+}
+
+.Navbar-text {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 15px;
+  font-family: Poppins;
+}
+
+.imageSection{
+  margin: 0% auto;
+  text-align: center;
+}
+
+.largeHeading {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 60px;
+  font-family: Poppins;
+  padding: 20px 20px 20px;
+}
+
+.icons {
+  text-align: center;
+  box-sizing: border-box;
+  width: 85px;
+  height: 81px;
+  border: 2px solid #A0A289;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.iconsPallete{
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+}
+
+.imgGroup{
+  display: inline-block;
+}
+
+.subheading {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 45px;
+  color: #50734F;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+  margin-bottom: 10px;
+}
+
+#Weather {
+  width: 135px;
+  height: 45px;
+}
+
+#News {
+  text-align: center;
+  margin: 2%;
+}
+
+#Yojanas{
+  text-align: center;
+  margin: 2%;
+}
+
+#Information{
+  text-align: center;
+  margin: 2%;
+}
+
+/* ****************** */
+
+.G-Models{
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.G-Sales{
+  scroll-snap-align: start;
+}
+
+.G-Sales:nth-child(1){
+  background-attachment: fixed;
+}
+.G-Sales:nth-child(2){
+  background-attachment: fixed;
+}
+.G-Sales:nth-child(3){
+  background-attachment: fixed;
+}
+.G-Sales:nth-child(4){
+  background-attachment: fixed;
+}
+.G-Sales:nth-child(5){
+  background-attachment: fixed;
+}
+
+
+.G-Weather{
+  padding: 50px 0px;
+  text-align: center;
+  border: solid 2px #5D885C;
+  border-radius: 5%;
+  margin: 200px auto;
+  width: 500px;
+}
+
+.G-News{
+  padding: 30px 0px;
+  text-align: center;
+  border: solid 2px #5D885C;
+  border-radius: 1%;
+  margin: 40px 40px;
+}
+
+.G-Yojanas{
+  padding: 30px 0px;
+  width: 700px;
+  border: solid 2px #5D885C;
+  margin: 0px auto 50px auto;
+  text-align: center;
+  border-radius: 1%;
+}
+
+.G-Info{
+  padding: 30px 0px;
+  width: 700px;
+  border: solid 2px #5D885C;
+  margin: 70px auto;
+  text-align: center;
+  border-radius: 1%;
+}

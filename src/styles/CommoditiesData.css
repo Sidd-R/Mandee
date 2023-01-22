@@ -1,0 +1,47 @@
+:root {
+    --light : #eee;
+    --text : #50734F;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .Navbar {
+    background-color: var(--light);
+  }
+  
+  .livemarketText {
+    color: #50734F;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: Poppins;
+  }
+
+  .livemarketHead {
+    color: #50631F;
+    font-weight: 700;
+    font-size: 25px;
+    font-family: Poppins;
+  }
+
+  .livemarketLarge{
+    color: #50734F;
+    font-weight: 900;
+    font-family: Poppins;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .registerForm {
+    margin: 1% 20%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: #ADC60663 -5px 5px, #ADC60663 -10px 10px, #ADC60663 -15px 15px;
+  }
+
+  .livemarketTable{
+    margin: 5%;
+    box-shadow: #ADC60663 -5px 5px, #ADC60663 -10px 10px, #ADC60663 -15px 15px;
+  }

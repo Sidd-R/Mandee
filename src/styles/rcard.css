@@ -1,0 +1,39 @@
+.r-card{
+    height: 400px;
+    width: 300px;
+    border: solid 3px hsl(65, 67%, 56%);
+    border-radius: 10px;
+    margin: 50px 10px;
+    text-align: center;
+}
+
+.farmer{
+    display: grid;
+    justify-content: center;
+    margin: 10px;
+}
+
+.farmer-image{
+    place-content: center;
+    object-fit: cover;
+    border-radius: 100%;
+    width: 180px;
+    height: 180px;
+}
+
+.farmer-name{
+    font-size: x-large;
+    font-weight: 500;
+    color: rgb(4, 106, 2);
+    bottom: 0;
+}
+
+.farmer-info{
+    display: grid;
+    padding: 0px 10px;
+    color: hsl(60, 4%, 50%);
+}
+
+.rating{
+    font-size: x-large;
+}

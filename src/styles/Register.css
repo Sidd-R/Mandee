@@ -1,0 +1,95 @@
+:root {
+    --light : #eee;
+    --text : #50734F;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .Navbar {
+    background-color: var(--light);
+  }
+  
+  .registerText {
+    color: #A0A189;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: Poppins;
+    text-align: left;
+    padding-left :30px;
+  }
+
+  .registerTextImage {
+    color: #A0A189;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: Poppins;
+    text-align: center;
+  }
+  
+  .footer {
+    background-color: #F0F5D1;
+    color: var(--text);
+    font-weight: 900;
+    font-family: Poppins;
+    font-size: 60px;
+    text-align: center;
+    padding: 40px;
+    padding-bottom: 100px;
+  }
+  
+  .registerForm {
+    margin: 5% 20%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: #ADC60663 -5px 5px, #ADC60663 -10px 10px, #ADC60663 -15px 15px;
+  }
+
+  .registerImage{
+    /* background: url("../images/image 21.png") ; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 42vh;
+    margin-bottom: 10%;
+  }
+
+  .loginImage{
+    background-image: url("../images/image1.png") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    margin-top: 10%;
+    /* margin-left: 90px; */
+  }
+
+  .alreadyRegistered{
+    color: #A0A189;
+    font-size: 15px;
+    font-family: Poppins;
+    margin-top: 20px;
+  }
+
+  .alreadyRegistered a{
+    text-decoration: none;
+  }
+
+  .signUp{
+    color: #A0A189;
+    font-weight: 900;
+    font-family: Poppins;
+    font-size: 40px;
+    margin-bottom: 0px;
+  }
+
+  .uploadPersonalImage{ 
+      border: 2px solid #A0A189;
+      border-radius: 10px;
+      padding: 20%;
+      margin: 20px;
+      height: 100px;
+      width: 100px;
+  }

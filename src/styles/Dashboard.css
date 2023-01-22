@@ -1,0 +1,69 @@
+.bold-text{
+  color: #5D885C;
+  font-size: x-large;
+}
+
+.main-dashboard{
+  padding: 0px 10%;
+  width: 80%;
+  margin-top: 40px;
+}
+
+.profile{
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.profile-img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 100px;
+  margin: 10px 60px;
+}
+
+.profile-details{
+  padding-left: 40px;
+    padding-top: 20px;
+}
+
+.profile-info{
+  font-weight: 400;
+  color: #50734fe0;
+  font-size: large;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.uploads{
+  width: 80%;
+}
+
+.sales{
+  display: flex;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+}
+
+.sales-img{
+  height: 270px;
+  width: 270px;
+  border-radius: 6px;
+}
+
+.sales-card-main{
+  margin: 20px 50px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  width: 330px;
+  padding: 30px;
+}
+
+.sales-price{
+  color: rgb(106, 106, 106);
+}
+
+.sales-info{
+
+}

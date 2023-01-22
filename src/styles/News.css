@@ -1,0 +1,18 @@
+.newsBox{
+    position: relative;
+    color: #50734F;
+    font-weight: 500;
+    font-size: 15px;
+    margin: 20px;
+    width: 350px;
+    box-shadow: rgba(240, 245, 209, 1) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.newsLink{
+    position: absolute;
+    font-size: larger;
+    text-decoration: none;
+    color: brown;
+    padding: 10px;
+    bottom: 0;
+}

@@ -1,0 +1,64 @@
+:root {
+  --light : #eee;
+  --text : #50734F;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.Navbar {
+  background-color: var(--light);
+}
+
+.Navbar-text {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 15px;
+  font-family: Poppins;
+}
+
+.Message .largeHeading{
+  color: var(--text);
+  font-weight: 700;
+  font-family: Poppins;
+  padding: 20px 20px 0px;
+}
+
+.Message .mediumHeading{
+  color: var(--text);
+  font-weight: 500;
+  font-family: Poppins;
+  padding: 0 0 0 20px;
+}
+
+.Message {
+  margin: 20px 20px 50px;
+}
+
+.footer {
+  background-color: #F0F5D1;
+  color: var(--text);
+  font-weight: 900;
+  font-family: Poppins;
+  font-size: 60px;
+  text-align: center;
+  padding: 40px;
+  padding-bottom: 100px;
+}
+
+.uploadForm {
+  margin: 0 7%;
+  padding: 30px;
+  text-align: center;
+}
+
+.uploadImage {
+  border: 2px solid #A0A189;
+  border-radius: 10px;
+  padding: 20%;
+  margin: 20px;
+  height: 200px;
+  width: 200px;
+}

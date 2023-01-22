@@ -1,0 +1,100 @@
+.home1{
+    position: relative;
+    height: 100vh;
+    background-image: url('https://s3-alpha-sig.figma.com/img/2f05/6b65/6f0459d8aab814eebc1c159e1e240bc5?Expires=1675036800&Signature=j1efziznz9zIpm3kCVfmv6zSXZ9EAkIm1lbUuoYZ5WPq4g0ZwtiFQXo-DcgI2An5dj4YafhsHdNpUxJHEkN1Qwg-~sFGzMLaftbSx3kb1pJjCuPRyrlY2oevLJXIrpQS81VmEPeujC-y38UVm-8-2AWCd8QvDVeickYj-SusScMWKp0ZyUIpBH744aqIwdzEmh6Zht1siUiw~KH7y~WAcXoRo-diHCaQ1VvfWGGCwa929a50-y6T5zpcOUwtX1OFRqz1bGxi2v~pCwdFTVn0a9pZsIJUmeqppzw-5ds5YxYlXjUGnZ5-s1qVfMe~K0Lj5gF6FZOBC49aaQ7fWaMgag__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+    background-position: center;
+}
+
+.home1-content{
+    margin: 0 0 40px 40px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.m1{
+    color: #fffbdb;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.m2{
+    color: #FFFEF0;
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.land{
+    width :60%;
+    margin: 120px auto;
+    display: grid;
+    justify-items: center;
+    padding: 10px ;
+    box-shadow: rgba(240, 245, 209, 1) 10px 39px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.title{
+    color:#5D885C;
+    font-family: Inter;
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.aim{
+    color: #A0A189;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.land-content{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.content{
+    font-size: 20px;
+    line-height: 35px;
+    padding: 0px 40px;
+}
+
+.home2{
+    display: grid;
+    width: 70%;
+    justify-items: center;
+    margin: 80px auto 50px auto;
+    box-shadow: rgba(240, 245, 209, 1) 10px 39px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.home2-content{
+    display: grid;
+    justify-items: center;
+    row-gap: 20px;
+    padding:  50px 0px;
+}
+
+.Models{
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.section{
+    scroll-snap-align: start;
+}
+
+.section:nth-child(1){
+    background-attachment: fixed;
+}
+.section:nth-child(2){
+    background-attachment: fixed;
+}
+.section:nth-child(3){
+    background-attachment: fixed;
+}
+.section-2:nth-child(4){
+    background-attachment: fixed;
+}

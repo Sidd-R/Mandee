@@ -1,0 +1,263 @@
+import React, { useState,useEffect } from "react";
+import { useNavigate } from "react-router-dom";import {TextField,FormControlLabel,Button,Stack,FormControl,RadioGroup,FormLabel,Radio} from '@mui/material';
+import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
+import IconButton from '@mui/material/IconButton';
+import '../styles/Register.css';
+import axios from "axios";
+import FormData from 'form-data'
+
+export default function Register({login,setLogin}) {
+    const [fname,setFName] = useState("jhsdjg");
+    const [file,setFile] = useState(null);
+
+
+    const setdata = (e)=>{
+        setFName(e.target.value)
+    }
+
+    const setimgfile = (e)=>{
+        console.log("kkkkkk");
+        setFile(e.target.files[0])
+    }
+    const nav = useNavigate()
+    useEffect(() => {
+      if (login) {
+        // console.log("kjknjkb");
+        nav('/dashboard')
+      }
+    }, [login])
+
+
+    const [details, setDetails] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        password: "",
+        location: "",
+        company: "",
+        type: "",
+        image: null
+    })
+
+    const handleImage = (e) => {
+        // console.log(e.target.files,'tff');
+        details.image= e.target.files[0]
+        console.log(details.image,'lllll')
+        console.log("kkkkkk");
+        setFile(e.target.files[0])
+        console.log('sfsdsfsf',details.image,'fileee',file);
+
+        // console.log(image,'imgg');
+    }
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setDetails((prev) => {
+            return { ...prev, [name]: value };
+        })
+    };
+
+    // const submit = () => {
+    //     let fd = new FormData();
+    //     fd.append('image', details.image, details.image.name);
+    //     console.log(details.image,fd)
+
+    //     let z = URL.createObjectURL(details.image)
+    //     axios.post('http://localhost:4000/', {details,fd})
+    //         .then((response) => {
+    //           //handle success
+    //           console.log(response);
+    //         }).catch((error) => {
+    //           //handle error
+    //           console.log(error);
+    //         });
+          
+       
+    // }
+
+    const submit = async(e)=>{
+        e.preventDefault();
+
+        var formData = new FormData();
+        console.log('hello',file);
+        formData.append("image",file)
+        // formData.append("name",details.name)
+        // formData.append("email",details.email)
+        // formData.append("password",details.password)
+        // formData.append("type",details.type)
+        // formData.append("location",details.location)
+        // formData.append("phone",details.phone)
+        // formData.append("company",details.company)
+        console.log(formData)
+
+        const config = {
+            headers:{
+                "Content-Type":"multipart/form-data"
+            }
+        }
+
+        const res = await axios.post('http://localhost:4000/register',formData,config);
+       
+         // nav('/dashboard')
+        // setLogin(true)
+    }
+
+    // console.log(details);
+
+    return (
+        <div>
+            {file?<img src={URL.createObjectURL(file)} alt="" />:null}
+            <div className="registerForm" style={{ "border": "2px solid #A0A189", "borderRadius": "10px" }}>
+                <form>
+                    <Stack spacing={10} direction="row" justifyContent={"space-evenly"} alignItems={"center"}>
+                        <div>
+                        <h1 className="signUp">Sign up</h1>
+                            <Stack spacing={2}>
+                                <div>
+                                    <p className="registerText">Name</p>
+                                    <TextField name="name" onChange={handleChange} variant="filled" style={{ "border": "2px solid #A0A189", "borderRadius": "20px", "width": "100%" }} />
+                                </div>
+                                <div>
+                                    <p className="registerText">Email</p>
+                                    <TextField name="email" type="email" onChange={handleChange} style={{ "border": "2px solid #A0A189", "borderRadius": "20px", "width": "100%" }} />
+                                </div>
+                                <div>
+                                    <p className="registerText">Phone</p>
+                                    <TextField name="phone" type="tel" onChange={handleChange} variant="filled" style={{ "border": "2px solid #A0A189", "borderRadius": "20px", "width": "100%" }} />
+                                </div>
+                                <div>
+                                    <p className="registerText">Password</p>
+                                    <TextField name="password" type="password" onChange={handleChange} variant="filled" style={{ "border": "2px solid #A0A189", "borderRadius": "20px", "width": "100%" }} />
+                                </div>
+                            </Stack>
+                        </div>
+                        <div>
+                        <div>
+                        <Stack alignItems="center" spacing={2} className="uploadPersonalImage">
+                            <IconButton aria-label="upload picture" component="label" style={{"color":"#50734F"}}>
+                                <input hidden onChange={handleImage} accept="image/*" type="file" name="image" />
+                                <AddAPhotoIcon />
+                            </IconButton>
+                            <Button variant="contained" component="label" color="inherit" style={{"backgroundColor": "#F0F5D1","width": "100%","margin":"20px", "borderRadius":"20px"}}>
+                                <p className='registerTextImage'>Your Image</p>
+                                <input onChange={handleImage} accept="image/*" type="file" name="image"/>
+                            </Button>
+                        </Stack>
+                        <Stack spacing={2}>
+                                <div>
+                                    <p className="registerText">Location</p>
+                                    <TextField name="location" onChange={handleChange} variant="filled" style={{ "border": "2px solid #A0A189", "borderRadius": "20px", "width": "100%" }} />
+                                </div>
+                                <div>
+                                    <p className="registerText">Company</p>
+                                    <TextField name="company" onChange={handleChange} style={{ "border": "2px solid #A0A189", "borderRadius": "20px", "width": "100%" }} />
+                                </div>
+                        </Stack>
+                        </div>
+                            <div style={{ "width": "30px", "height":"20px" }}></div>
+                            <FormControl>
+                            <FormLabel id="demo-row-radio-buttons-group-label"><p className="registerText">Select the account type</p></FormLabel>
+                                    <RadioGroup row aria-labelledby="demo-row-radio-buttons-group-label" name="row-radio-buttons-group">
+                                        <FormControlLabel onClick={handleChange} name="type" value="0" control={<Radio sx={{ "color": "#A0A189", '&.Mui-checked': { "color": "#A0A189" } }} />} label="Farmer" /> {/*0-farmer*/}
+                                        <FormControlLabel onClick={handleChange} name="type" value="1" control={<Radio sx={{ "color": "#A0A189", '&.Mui-checked': { "color": "#A0A189" } }} />} label="Buyer" />
+                                    </RadioGroup>
+                            </FormControl>
+                        </div>
+                    </Stack>
+                    <p className="alreadyRegistered">Already have an account?<a href="#"> Login</a></p>
+                    <Button 
+                    color="inherit" onClick={submit}
+                    style={{ "backgroundColor": "#F0F5D1", "width": "60%", "margin": "20px","border": "2px solid #A0A189", "borderRadius": "20px" }}>
+                        <p className="Navbar-text">Submit</p>
+                    </Button>
+                </form>
+            </div>
+        </div>
+    )
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const express = require("express");
+const router = express.Router();
+const connection = require("../db/connection");
+const multer = require("multer");
+const moment = require("moment")
+
+var imgconfig = multer.diskStorage({
+  destination:(req,file,callback)=>{
+      callback(null,"./uploads");
+  },
+  filename:(req,file,callback)=>{
+      callback(null,`image-${Date.now()}.${file.originalname}`)
+  }
+});
+
+
+// img filter
+const isImage = (req,file,callback)=>{
+  if(file.mimetype.startsWith("image")){
+      callback(null,true)
+  }else{
+      callback(null,Error("only image is allowd"))
+  }
+}
+
+var upload = multer({
+  storage:imgconfig,
+  fileFilter:isImage
+})
+
+
+
+// register userdata
+router.route('/').post(upload.single("photo"),(req,res)=>{
+  const {fname} = req.body;
+  const {filename} = req.file;
+
+  console.log(req.body,req.file,"it hurts so good")
+
+
+  // if(!fname || !filename){
+  //     res.status(422).json({status:422,message:"fill all the details"})
+  // }
+  
+  try {
+      
+      let date = moment(new Date()).format("YYYY-MM-DD hh:mm:ss");
+      
+      // conn.query("INSERT INTO users SET ?",{username:fname,userimg:filename,date:date},(err,result)=>{
+      //     if(err){
+      //         console.log("error")
+      //     }else{
+      //         console.log("data added")
+      //         res.status(201).json({status:201,data:req.body})
+      //     }
+      // })
+  } catch (error) {
+      res.status(422).json({status:422,error})
+  }
+});
+
+
+module.exports = router

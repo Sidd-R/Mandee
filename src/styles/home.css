@@ -1,0 +1,41 @@
+.home {
+  height: 100vh;
+  background-image: url("../images/home.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  display: grid;
+  justify-content: right;
+  height: 50vh;
+  padding: 50px;
+
+}
+
+.line-1 {
+  font-size: 80px;
+  font-weight: 700;
+  justify-self: right;
+  color: rgba(255, 254, 240, 1);
+  margin-top: 90px;
+
+}
+
+.line-2 {
+  font-size: 60px;
+  font-weight: 700;
+  justify-self: right;
+  color: rgba(255, 247, 178, 1);
+  margin-top: 90px;
+
+}
+
+.line-3 {
+  font-size: 40px;
+  font-weight: 500;
+  justify-self: right;
+  color: rgba(255, 254, 250, 1);
+  margin-top: 90px;
+
+}

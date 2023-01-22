@@ -1,0 +1,41 @@
+.card{
+    height: 400px;
+    width: 300px;
+    border: solid 3px hsl(65, 67%, 56%);
+    border-radius: 10px;
+    margin: 20px 10px;
+}
+
+.item{
+    display: grid;
+    position: relative;
+    justify-content: center;
+    margin: 10px;
+}
+
+.item-image{
+    place-content: center;
+    border-radius: 10px;
+    width: 290px;
+    height: 300px;
+}
+
+.item-name{
+    position: absolute;
+    font-size: x-large;
+    margin: 0 0 5px 10px;
+    color: #FFFEF0;
+    bottom: 0;
+}
+
+.info{
+    display: flex;
+    justify-content: space-around;
+    color: hsl(60, 4%, 50%);
+}
+
+.desc{
+    font-size: 17px;
+    color: #5D885C;
+    padding: 5px 10px;  
+}

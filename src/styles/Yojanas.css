@@ -1,0 +1,20 @@
+.infoPallete {
+  background: #fffffb;
+  border: 1px solid #a0a289;
+  border-radius: 20px;
+  width: 600px;
+  line-height: 2;
+  font-family: Popins;
+  color: var(--text);
+  padding: 2% 3%;
+  font-size: 20px;
+  margin: 3% auto;
+}
+
+ol {
+  list-style-type: none;
+}
+
+.yojlist .li {
+  padding: 4px;
+}
